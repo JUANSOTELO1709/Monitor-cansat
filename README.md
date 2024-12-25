@@ -26,10 +26,9 @@ Este proyecto proporciona una interfaz gráfica en Python para visualizar en tie
 
 ## Instalación
 
-1. **Instala las bibliotecas necesarias y clona el repositorio**
+1. **Clona el repositorio**
    ```bash
    git clone https://github.com/tu_usuario/monitor-cansat.git
-   pip install pyserial tk
 ´´´
 
 # Monitor del CanSat
@@ -45,11 +44,13 @@ Este proyecto proporciona una interfaz gráfica en Python para visualizar en tie
 ### Modo Arduino
 1. Conecta tu Arduino al ordenador.
 2. Verifica el puerto serial asignado al Arduino.
-3. Ejecuta el script para lectura desde Arduino:  
+3. Ejecuta el script para lectura desde Arduino e instala libreria:  
    `python monitor_cansat_serial.py`
-
+   ```bash
+   pip install pyserial tk
+´´´
 4. La interfaz gráfica mostrará los datos enviados por el Arduino.
-
+![monitor](https://github.com/user-attachments/assets/0e21fdb5-95f4-4f5c-bd0b-6dcd1bf6bab0)
 ---
 
 ## Estructura del Proyecto
