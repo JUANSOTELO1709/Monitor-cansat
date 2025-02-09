@@ -9,6 +9,9 @@ class CanSatInterface:
         self.root = root
         self.root.title("Interfaz CanSat")
 
+        self.canvas = tk.Canvas(root, width=root.winfo_screenwidth(), height=root.winfo_screenheight())
+        self.canvas.pack(fill=tk.BOTH, expand=True)
+
         # Crear los cuadros para los parámetros
         self.create_param_frame("Presión (hPa)", 0, 0)
         self.create_param_frame("Temperatura (°C)", 1, 0)
@@ -21,7 +24,7 @@ class CanSatInterface:
 
     def create_param_frame(self, param_name, row, col):
         frame = ttk.LabelFrame(self.root, text=param_name)
-        frame.grid(row=row, column=col, padx=10, pady=10, sticky="nsew")
+        self.canvas.create_window(10 + col*200, 10 + row*100, anchor='nw', window=frame)  # Ajusta las posiciones según sea necesario
 
         label = ttk.Label(frame, text="Valor:")
         label.pack(side="left")
@@ -31,11 +34,11 @@ class CanSatInterface:
 
     def create_graph_frame(self):
         frame = ttk.LabelFrame(self.root, text="Gráficos en Tiempo Real")
-        frame.grid(row=2, column=1, columnspan=2, padx=10, pady=10, sticky="nsew")
+        self.canvas.create_window(10, 300, anchor='nw', window=frame)  # Ajusta la posición según sea necesario
 
         fig, self.ax = plt.subplots()
-        self.canvas = FigureCanvasTkAgg(fig, master=frame)
-        self.canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+        self.canvas_plot = FigureCanvasTkAgg(fig, master=frame)
+        self.canvas_plot.get_tk_widget().pack(fill=tk.BOTH, expand=True)
         self.ax.plot([random.randint(0, 100) for _ in range(10)], label="Muestra")
         self.ax.legend()
 
@@ -45,7 +48,7 @@ class CanSatInterface:
         self.ax.clear()
         self.ax.plot([random.randint(0, 100) for _ in range(10)], label="Muestra")
         self.ax.legend()
-        self.canvas.draw()
+        self.canvas_plot.draw()
         self.root.after(1000, self.update_graph)
 
 root = tk.Tk()
