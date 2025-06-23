@@ -77,6 +77,4 @@ h = \frac{T_0}{L} \left(1 - \left(\frac{P}{P_0}\right)^{0.1903} \right)
    python graficador_altura.py
 ```
 
-Se abrirá una ventana con las gráficas que se actualizan cada 500 ms.
-
 Autor: Juan David Sotelo
