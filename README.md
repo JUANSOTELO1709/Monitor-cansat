@@ -20,9 +20,8 @@ Este proyecto de Python permite visualizar en tiempo real los datos enviados por
 
 ## 📈 ¿Qué grafica el programa?
 
-El programa presenta 3 subgráficos en tiempo real, con barras de error representando la desviación estándar de los datos recopilados:
-
-    Altura vs Temperatura (K)
+   
+    sAltura vs Temperatura (K)
 
     Altura vs Presión (hPa)
 
