@@ -18,7 +18,7 @@ Este proyecto de Python permite visualizar en tiempo real los datos enviados por
 
     Velocidad de ascenso/descenso (estimada por GPS o barómetro)
 
-📈 ¿Qué grafica el programa?
+## 📈 ¿Qué grafica el programa?
 
 El programa presenta 3 subgráficos en tiempo real, con barras de error representando la desviación estándar de los datos recopilados:
 
@@ -29,7 +29,7 @@ El programa presenta 3 subgráficos en tiempo real, con barras de error represen
     Altura vs Velocidad (m/s)
 
 Se distinguen los datos durante el ascenso (↓ presión) y el descenso (↑ presión).
-🧠 Principales ecuaciones y constantes
+## 🧠 Principales ecuaciones y constantes
 
     Altura calculada mediante la ecuación barométrica:
     h=T0L(1−(PP0)0.1903)
@@ -44,7 +44,7 @@ Se distinguen los datos durante el ascenso (↓ presión) y el descenso (↑ pre
     R	8.314 J/mol·K	Constante universal de gases
     M	0.0289644 kg/mol	Masa molar del aire
 
-🔄 Funcionamiento del código
+## 🔄 Funcionamiento del código
 
     Lee los datos del puerto serial (COM3 por defecto).
 
@@ -62,13 +62,13 @@ Se distinguen los datos durante el ascenso (↓ presión) y el descenso (↑ pre
 
         Altura vs Velocidad
 
-🖼️ Ejemplo de formato de datos esperado desde Arduino
+## 🖼️ Ejemplo de formato de datos esperado desde Arduino
 
 25.0,1005.6,3.1
 24.7,1003.2,3.3
 24.4,1001.1,3.6
 
-🚀 Cómo ejecutar
+## 🚀 Cómo ejecutar
 
     Asegúrate de conectar tu Arduino y que el puerto serial esté configurado correctamente en el código (COM3 por defecto).
 
@@ -79,7 +79,7 @@ Se distinguen los datos durante el ascenso (↓ presión) y el descenso (↑ pre
     Se abrirá una ventana con las gráficas que se actualizan cada 500 ms.
 
 Autor: Juan David Sotelo
-Licencia: MIT
+Licencia: etitc
 
 
 ---
