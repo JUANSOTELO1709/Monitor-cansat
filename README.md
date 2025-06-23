@@ -8,10 +8,7 @@ Este proyecto de Python permite visualizar en tiempo real los datos enviados por
 - Arduino (u otro microcontrolador) que envíe datos por serial en formato:  
   `temperatura (°C),presion (hPa),velocidad (m/s)`
 - Librerías de Python:
-  ```bash
-  pip install pyserial matplotlib numpy
 
-```
    ⚙️ Hardware esperado
    El Arduino debe estar conectado a sensores que puedan medir:
 
