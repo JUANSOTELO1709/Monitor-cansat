@@ -65,4 +65,18 @@ h = \frac{T_0}{L} \left(1 - \left(\frac{P}{P_0}\right)^{0.1903} \right)
 25.0,1005.6,3.1
 24.7,1003.2,3.3
 24.4,1001.1,3.6
+```
 
+
+## 🚀 Cómo ejecutar
+
+1. Asegúrate de conectar tu Arduino y que el puerto serial esté configurado correctamente en el código (`COM3` por defecto).
+2. Ejecuta el script en tu entorno de desarrollo con el siguiente comando:
+
+   ```bash
+   python graficador_altura.py
+```
+
+Se abrirá una ventana con las gráficas que se actualizan cada 500 ms.
+
+Autor: Juan David Sotelo
